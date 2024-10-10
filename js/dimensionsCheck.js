@@ -5,7 +5,7 @@ const Dims = document.querySelector("#dimens");
 // Create an interval check every half second.
 const DimensionsCheck = setInterval(() => {
     // Check if the dimensions are not correct.
-    if (!((window.innerWidth === 1920 && window.innerHeight === 917) || (window.innerWidth === 1920 && window.innerHeight === 920) || (window.innerWidth === 1920 && window.innerHeight === 918) || (window.innerWidth === 1920 && window.innerHeight === 919))) {
+    if (!((window.innerWidth === 1920 && window.innerHeight === 917) || (window.innerWidth === 1920 && window.innerHeight === 911) || (window.innerWidth === 1920 && window.innerHeight === 920) || (window.innerWidth === 1920 && window.innerHeight === 918) || (window.innerWidth === 1920 && window.innerHeight === 919))) {
         // If dimensions modal has the hidden property.
         if (Modal.classList.contains("opacity-0")) {
             // Remove the hidden class to show the modal.
