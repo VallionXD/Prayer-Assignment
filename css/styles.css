@@ -1,0 +1,129 @@
+body {
+    -webkit-font-smoothing: antialiased;
+    /* For WebKit browsers */
+    -moz-osx-font-smoothing: grayscale;
+    /* General smoothing */
+}
+
+/* Glow. */
+.glow {
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}
+
+/* text shadow -1 */
+.text-shadow-n1 {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.25),
+        -2px -2px 15px rgba(0, 0, 0, 0.25),
+        2px -2px 15px rgba(0, 0, 0, 0.25),
+        -2px 2px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* text shadow */
+.text-shadow {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5),
+        -2px -2px 15px rgba(0, 0, 0, 0.5),
+        2px -2px 15px rgba(0, 0, 0, 0.5),
+        -2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* text shadow 2 */
+.text-shadow-2 {
+    text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.8),
+        -2px -2px 15px rgba(0, 0, 0, 0.8),
+        2px -2px 15px rgba(0, 0, 0, 0.8),
+        -2px 2px 15px rgba(0, 0, 0, 0.8);
+}
+
+html,
+body {
+    height: 100%;
+    overflow: none;
+}
+
+.wave {
+    background: rgb(255 255 255 / 25%);
+    border-radius: 1000% 1000% 0 0;
+    position: fixed;
+    width: 200%;
+    padding: 0px;
+    margin: 0px;
+    height: 12em;
+    animation: wave 10s -3s linear infinite;
+    transform: translate3d(0, 0, 0);
+    opacity: 0.8;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.wave:nth-of-type(2) {
+    bottom: -1.25em;
+    animation: wave 18s linear reverse infinite;
+    opacity: 0.8;
+}
+
+.wave:nth-of-type(3) {
+    bottom: -4.9em;
+    animation: wave 20s -1s reverse infinite;
+    opacity: 0.9;
+}
+
+@keyframes wave {
+    2% {
+        transform: translateX(1);
+    }
+
+    25% {
+        transform: translateX(-25%);
+    }
+
+    50% {
+        transform: translateX(-50%);
+    }
+
+    75% {
+        transform: translateX(-25%);
+    }
+
+    100% {
+        transform: translateX(1);
+    }
+}
+
+:root {
+    --sb-track-color: rgba(0, 0, 0, 0);
+    --sb-thumb-color: rgba(0, 0, 0, 0);
+    --sb-size: 0px;
+}
+
+*::-webkit-scrollbar {
+    width: var(--sb-size);
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--sb-track-color);
+    border-radius: 3px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background: var(--sb-thumb-color);
+    border-radius: 3px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    * {
+        scrollbar-color: var(--sb-thumb-color) var(--sb-track-color);
+    }
+}
+
+@font-face {
+    font-family: "Children One"; /* Name for the font */
+    src: url("fonts/CHILDREN-ONE.otf") format("opentype"); /* Path to your .otf file */
+    font-weight: normal; /* Optional */
+    font-style: normal; /* Optional */
+}
+
+/* Example usage */
+body {
+    font-family: "Children One", sans-serif;
+}
