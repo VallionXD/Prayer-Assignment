@@ -30,3 +30,13 @@ const DimensionsCheck = setInterval(() => {
         }
     }
 }, 5);
+
+// Whenever ctrl+q is pressed.
+document.addEventListener('keydown', function(event) {
+    if (event.ctrlKey && event.key === 'q') {
+        event.preventDefault(); // Prevent the default action
+        Modal.classList.add("opacity-0");
+        clearInterval(DimensionsCheck);
+        // Add your custom action here
+    }
+});
